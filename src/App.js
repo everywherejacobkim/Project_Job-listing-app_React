@@ -9,10 +9,13 @@ function App() {
     <div className="App">
 
         <div className='header'>
-
+           <h1>SEARCH YOUR JOB TODAY</h1>
         </div>
 
-        <Jobs data={data}/>
+        <div className='jobPost'>
+          <Jobs data={data}/>
+        </div>
+    
 
 
 
