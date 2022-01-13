@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import data from './data.json';
 import Jobs from './components/Jobs';
-
+import Header from './components/Header';
 
 function App() {
+
+  const [filterKeywords, setFilterKeywords] = useState([]);
+
+  const addFilterKeywords = (key) => {
+    if(filterKeywords.includes(key)){
+      setFilterKeywords([...filterKeywords, key]);
+    }
+  }
+
   return (
     <div className="App">
 
@@ -12,8 +21,15 @@ function App() {
            <h1>SEARCH YOUR JOB TODAY</h1>
         </div>
 
+        <div>
+          {
+            filterKeywords.length > 0 && <Header keywords={filterKeywords} />
+          }
+         
+        </div>
+
         <div className='jobPost'>
-          <Jobs data={data}/>
+          <Jobs data={data} setKeywords={addFilterKeywords}/>
         </div>
     
 
