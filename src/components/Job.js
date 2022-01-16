@@ -24,8 +24,8 @@ let keywords = [role, level, ...languages, ...tools]
 const [icon, setIcon] = useState("");
 
 const importSvgs = () => {
-    const logoSvg = import(`${logo}`).then(data => {
-        setIcon(data.default);
+    const logoSvg = import(`${logo}`).then((d) => {
+        setIcon(d.default);
     })
 }
 

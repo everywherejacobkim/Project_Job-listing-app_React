@@ -5,8 +5,8 @@ import Job from './Job';
     console.log(data);
     return (
         <div className='jobs'>
-            {data.map(data => {
-                return <Job data={data} setKeywords={setKeywords}/>
+            {data.map((d) => {
+                return <Job data={d} setKeywords={setKeywords}/>;
             })}
            
         </div>
