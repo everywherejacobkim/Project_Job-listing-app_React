@@ -8,9 +8,9 @@ function App() {
 
   const [filterKeywords, setFilterKeywords] = useState([]);
 
-  const addFilterKeywords = (key) => {
-    if(filterKeywords.includes(key)){
-      setFilterKeywords([...filterKeywords, key]);
+  const addFilterKeywords = (data) => {
+    if(filterKeywords.includes(data)){
+      setFilterKeywords([...filterKeywords, data]);
     }
   }
 

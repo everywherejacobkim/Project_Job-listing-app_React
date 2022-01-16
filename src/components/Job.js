@@ -70,7 +70,9 @@ useEffect(()=>{
                 <div className='stack'>
                    {
                        keywords.map((key, id) => 
-                           <button onClick={()=> props.setKeywords(key)} key={id}>{key}</button>
+                           <button onClick={()=> props.setKeywords(key)} key={id}>
+                               {key}
+                            </button>
                        )
                    }
                 </div>
